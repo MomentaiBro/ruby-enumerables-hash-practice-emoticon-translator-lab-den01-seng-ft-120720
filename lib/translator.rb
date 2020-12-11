@@ -28,8 +28,8 @@ end
 
 def get_english_meaning(file_path, emoticon)
   hash = load_library(file_path)
-  hash.find do |keys, values|
-    if hash[keys][:japanese] == emoticon 
+  hash.find do {|keys, values| hash[keys][:japanese] == emoticon}
+    if  
       return keys
     end
   # binding.pry
